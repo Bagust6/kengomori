@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Home() {
   const sectionStyle = {
-    padding: "100px 20px",
+    padding: "20px 20px",
     maxWidth: "720px",
     margin: "0 auto",
     fontSize: "18px",
@@ -79,7 +79,6 @@ export default function Home() {
           style={{
             borderRadius: "50%",
             objectFit: "cover",
-            marginBottom: "28px",
             boxShadow: "0 10px 30px rgba(0,0,0,0.08)"
           }}
         />
@@ -107,7 +106,7 @@ export default function Home() {
       </section>
 
       {/* ================= MID IMAGE ================= */}
-      <div style={{ maxWidth: "980px", margin: "100px auto", padding: "0 16px" }}>
+      <div style={{ maxWidth: "980px", margin: "auto", padding: "0 16px" }}>
         <Image
           src="/Mid-page.jpeg"
           alt="Mid visual"
@@ -175,7 +174,7 @@ export default function Home() {
       </section>
 
       {/* ================= END IMAGE ================= */}
-      <div style={{ maxWidth: "980px", margin: "100px auto", padding: "0 16px" }}>
+      <div style={{ maxWidth: "980px", margin: "auto", padding: "0 16px" }}>
         <Image
           src="/End-page.jpeg"
           alt="End visual"
