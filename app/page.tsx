@@ -79,7 +79,6 @@ export default function Home() {
           style={{
             borderRadius: "50%",
             objectFit: "cover",
-            marginBottom: "28px",
             boxShadow: "0 10px 30px rgba(0,0,0,0.08)"
           }}
         />
