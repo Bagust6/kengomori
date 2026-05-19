@@ -1,8 +1,22 @@
+"use client";
+
+import { useCallback } from "react";
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const scrollTo = useCallback((id: string) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    el.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  }, []);
+
   return (
     <html lang="en">
       <body
@@ -10,9 +24,9 @@ export default function RootLayout({
           margin: 0,
           fontFamily: "sans-serif",
           paddingTop: "70px",
-          scrollBehavior: "smooth",
         }}
       >
+        {/* HEADER */}
         <header
           style={{
             position: "fixed",
@@ -30,19 +44,33 @@ export default function RootLayout({
             zIndex: 1000,
           }}
         >
-          <a href="#home" style={{ textDecoration: "none", color: "black" }}>
+          <button
+            onClick={() => scrollTo("home")}
+            style={btnStyle}
+          >
             HOME
-          </a>
-          <a href="#about" style={{ textDecoration: "none", color: "black" }}>
-            ABOUT
-          </a>
+          </button>
 
-          <a href="#project" style={{ textDecoration: "none", color: "black" }}>
+          <button
+            onClick={() => scrollTo("about")}
+            style={btnStyle}
+          >
+            ABOUT
+          </button>
+
+          <button
+            onClick={() => scrollTo("project")}
+            style={btnStyle}
+          >
             PROJECT
-          </a>
-          <a href="#contact" style={{ textDecoration: "none", color: "black" }}>
+          </button>
+
+          <button
+            onClick={() => scrollTo("contact")}
+            style={btnStyle}
+          >
             CONTACT
-          </a>
+          </button>
         </header>
 
         {children}
@@ -50,3 +78,12 @@ export default function RootLayout({
     </html>
   );
 }
+
+const btnStyle: React.CSSProperties = {
+  background: "none",
+  border: "none",
+  cursor: "pointer",
+  fontSize: "14px",
+  fontWeight: 500,
+  color: "black",
+};
