@@ -44,33 +44,21 @@ export default function RootLayout({
             zIndex: 1000,
           }}
         >
-          <button
-            onClick={() => scrollTo("home")}
-            style={btnStyle}
-          >
+          <a onClick={() => document.getElementById("home")?.scrollIntoView({ behavior: "smooth" })} style={linkStyle}>
             HOME
-          </button>
+          </a>
 
-          <button
-            onClick={() => scrollTo("about")}
-            style={btnStyle}
-          >
+          <a onClick={() => document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })} style={linkStyle}>
             ABOUT
-          </button>
+          </a>
 
-          <button
-            onClick={() => scrollTo("project")}
-            style={btnStyle}
-          >
+          <a onClick={() => document.getElementById("project")?.scrollIntoView({ behavior: "smooth" })} style={linkStyle}>
             PROJECT
-          </button>
+          </a>
 
-          <button
-            onClick={() => scrollTo("contact")}
-            style={btnStyle}
-          >
+          <a onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })} style={linkStyle}>
             CONTACT
-          </button>
+          </a>
         </header>
 
         {children}
@@ -79,11 +67,9 @@ export default function RootLayout({
   );
 }
 
-const btnStyle: React.CSSProperties = {
-  background: "none",
-  border: "none",
+const linkStyle: React.CSSProperties = {
   cursor: "pointer",
-  fontSize: "14px",
-  fontWeight: 500,
+  textDecoration: "none",
   color: "black",
+  fontWeight: 500
 };
