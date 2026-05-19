@@ -105,6 +105,38 @@ export default function Home() {
         </p>
       </section>
 
+      {/* ================= DRAKE GIF ================= */}
+      <div style={{ maxWidth: "980px", margin: "auto" }}>
+        <img
+          src="/drake-computer.gif"
+          alt="Mid visual"
+          style={{
+            width: "100%",
+            height: "auto",
+            objectFit: "cover",
+          }}
+        />
+      </div>
+
+      {/* ================= PROJECTS ================= */}
+      <section id="project" style={sectionStyle}>
+        <h2 style={titleStyle}>My Projects</h2>
+
+        <p>
+          <a
+            href="https://kengomori.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: "#2563eb", textDecoration: "none" }}
+          >
+            Kengo Mori Portfolio
+          </a>
+        </p>
+        <p>
+          {/* next project */}
+        </p>
+      </section>
+
       {/* ================= MID IMAGE ================= */}
       <div style={{ maxWidth: "980px", margin: "auto", padding: "0 16px" }}>
         <Image
@@ -120,23 +152,6 @@ export default function Home() {
           }}
         />
       </div>
-
-      {/* ================= PROJECTS ================= */}
-      <section id="project" style={sectionStyle}>
-        <h2 style={titleStyle}>My Projects</h2>
-
-        <p>
-          -{" "}
-          <a
-            href="https://kengomori.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ color: "#2563eb", textDecoration: "none" }}
-          >
-            Kengo Mori Portfolio
-          </a>
-        </p>
-      </section>
 
       {/* ================= CONTACT ================= */}
       <section id="contact" style={sectionStyle}>
