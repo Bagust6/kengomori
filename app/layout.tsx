@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default function RootLayout({
   children,
 }: {
@@ -7,29 +5,47 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body style={{ margin: 0, fontFamily: "sans-serif" }}>
-        
-        {/* Header */}
-        <header style={{
-          display: "flex",
-          justifyContent: "center",
-          gap: "30px",
-          padding: "20px",
-          borderBottom: "1px solid #eee",
-          fontSize: "14px",
-          fontWeight: 500
-        }}>
-          <Link href="/" style={{ textDecoration: "none", color: "black" }}>HOME</Link>
-          <Link href="/about" style={{ textDecoration: "none", color: "black" }}>ABOUT</Link>
-          <Link href="/projects" style={{ textDecoration: "none", color: "black" }}>PROJECTS</Link>
-          <Link href="/contact" style={{ textDecoration: "none", color: "black" }}>CONTACT</Link>
+      <body
+        style={{
+          margin: 0,
+          fontFamily: "sans-serif",
+          paddingTop: "70px",
+          scrollBehavior: "smooth",
+        }}
+      >
+        <header
+          style={{
+            position: "fixed",
+            top: 0,
+            width: "100%",
+            height: "70px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            gap: "30px",
+            fontSize: "14px",
+            fontWeight: 500,
+            background: "white",
+            borderBottom: "1px solid #eee",
+            zIndex: 1000,
+          }}
+        >
+          <a href="#home" style={{ textDecoration: "none", color: "black" }}>
+            HOME
+          </a>
+          <a href="#about" style={{ textDecoration: "none", color: "black" }}>
+            ABOUT
+          </a>
+
+          <a href="#project" style={{ textDecoration: "none", color: "black" }}>
+            PROJECT
+          </a>
+          <a href="#contact" style={{ textDecoration: "none", color: "black" }}>
+            CONTACT
+          </a>
         </header>
 
-        {/* Page content */}
-        <main>
-          {children}
-        </main>
-
+        {children}
       </body>
     </html>
   );
